@@ -1,10 +1,11 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-      <h1>Hei yoooo</h1>
+      <Sidebar />
     </div>
   );
 }
