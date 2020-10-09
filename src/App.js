@@ -15,20 +15,21 @@ function App() {
   useEffect(() => {
    
     auth.onAuthStateChanged((authUser) => {
-      console.log('user is', authUser);
+      console.log('is user', authUser);
       if (authUser) {
-        dispatch(login({
+        dispatch(
+          login({
           uid: authUser.uid,
           photo: authUser.photoURL,
           email: authUser.email,
           displayName: authUser.displayName,
         }))
       } else {
-
+        dispatch(logout());
       }
-    })
+    });
     
-  }, [])
+  }, [dispatch]);
 
   return (
     <div className="app">
