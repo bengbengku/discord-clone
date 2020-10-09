@@ -4,6 +4,7 @@ import Chat from './Chat';
 import './App.css';
 import { useSelector } from 'react-redux';
 import { selectUser } from "./features/userSlice";
+import Login from "./Login";
 
 function App() {
   const user = useSelector(selectUser);
@@ -16,7 +17,7 @@ function App() {
         <Chat />
         </>
       ) : (
-        <h2>Anda harus login</h2>
+        <Login />
       )}
       
     </div>
